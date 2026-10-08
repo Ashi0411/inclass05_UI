@@ -33,15 +33,10 @@ export default function ProfileScreen() {
         <View style={styles.avatarSection}>
           <View style={styles.avatarWrapper}>
             <Image
-              source={{
-                uri: 'https://api.dicebear.com/7.x/avataaars/png?seed=Savishka&glasses=round',
-              }}
+              source={require('../../assets/images/avatar.png')}
               style={styles.avatarImage}
+              resizeMode="cover"
             />
-            {/* Green Checkmark Badge */}
-            <View style={styles.badgeContainer}>
-              <Text style={styles.badgeText}>✓</Text>
-            </View>
           </View>
         </View>
 
@@ -121,11 +116,8 @@ const styles = StyleSheet.create({
     height: 124,
     borderRadius: 62,
     backgroundColor: '#FFFFFF',
-    borderWidth: 2,
-    borderColor: '#FECACA',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'relative',
     elevation: 3,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
@@ -133,28 +125,9 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   avatarImage: {
-    width: 112,
-    height: 112,
-    borderRadius: 56,
-  },
-  badgeContainer: {
-    position: 'absolute',
-    bottom: 4,
-    right: 4,
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: '#22C55E',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#FFFFFF',
-  },
-  badgeText: {
-    color: '#FFFFFF',
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: -2,
+    width: 124,
+    height: 124,
+    borderRadius: 62,
   },
   divider: {
     height: 1.5,
